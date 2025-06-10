@@ -8,8 +8,19 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "customer")
 public class Customer {
+	
 
-    @Id
+    public Customer() {
+	
+	}
+	public Customer(int id, String name, String order, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.order = order;
+		this.email = email;
+	}
+	@Id
     @Column
     private int id;
 
